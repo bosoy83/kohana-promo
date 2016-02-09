@@ -27,23 +27,18 @@ return array(
 				),
 			
 				'promo_edit_1' => array(
-					'role' => 'super',
-					'resource' => 'promo',
-					'privilege' => 'edit',
-				),
-				'promo_edit_2' => array(
 					'role' => 'base',
 					'resource' => 'promo',
 					'privilege' => 'edit',
-					'assertion' => array('Acl_Assert_Argument', array(
-						'site_id' => 'site_id'
+					'assertion' => array('Acl_Assert_Edit', array(
+						'site_id' => SITE_ID,
 					)),
 				),
 				'promo_hide' => array(
 					'role' => 'full',
 					'resource' => 'promo',
 					'privilege' => 'hide',
-					'assertion' => array('Acl_Assert_Site', array(
+					'assertion' => array('Acl_Assert_Hide', array(
 						'site_id' => SITE_ID,
 						'site_id_master' => SITE_ID_MASTER
 					)),
@@ -65,16 +60,11 @@ return array(
 				),
 				
 				'promo_config_edit_1' => array(
-					'role' => 'super',
-					'resource' => 'promo_config',
-					'privilege' => 'edit',
-				),
-				'promo_config_edit_2' => array(
 					'role' => 'base',
 					'resource' => 'promo_config',
 					'privilege' => 'edit',
-					'assertion' => array('Acl_Assert_Argument', array(
-						'site_id' => 'site_id'
+					'assertion' => array('Acl_Assert_Edit', array(
+						'site_id' => SITE_ID,
 					)),
 				),
 			),
